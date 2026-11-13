@@ -27,6 +27,12 @@ npm run build
 
 `npm run dev` starts the Vite dev server. `npm test` runs Vitest once. `npm run build` typechecks the project and writes a static build to `dist/`.
 
+## Preview
+
+[https://student-bu.github.io/apex/](https://student-bu.github.io/apex/)
+
+A push to `main` runs the tests and production build in GitHub Actions, then deploys `dist/` to GitHub Pages.
+
 ## How a workout is chosen
 
 `generateWorkout` takes the selected libraries, a duration of 20, 30, or 45 minutes, and a seed. The page uses the local date (`YYYY-MM-DD`) as the daily seed. **换一换** appends a counter (`2026-11-13#1`) for another arrangement; that counter lives in memory and resets on refresh. **回到今日** returns to the date seed.
