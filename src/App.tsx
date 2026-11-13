@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { exercises } from './data/catalog.ts'
+import { primeAudio } from './lib/beep.ts'
 import { LIBRARY_LABEL, MUSCLE_LABEL, WARNING_LABEL } from './lib/labels.ts'
 import {
   DURATION_OPTIONS,
@@ -7,6 +8,7 @@ import {
   generateWorkout,
   type DurationMinutes,
 } from './lib/workout.ts'
+import Session from './Session.tsx'
 import { LIBRARIES, type Library } from './types/exercise.ts'
 
 function formatClock(totalSeconds: number): string {
@@ -32,6 +34,7 @@ export default function App() {
   const [libraries, setLibraries] = useState<Library[]>([...LIBRARIES])
   const [duration, setDuration] = useState<DurationMinutes>(30)
   const [nonce, setNonce] = useState(0)
+  const [training, setTraining] = useState(false)
 
   const today = new Date()
   const dateSeed = dailySeed(today)
@@ -48,6 +51,16 @@ export default function App() {
         ? current.filter((item) => item !== library)
         : [...current, library],
     )
+  }
+
+  function startTraining() {
+    primeAudio()
+    setTraining(true)
+  }
+
+  if (training && workout.blocks.length > 0) {
+    const sessionKey = workout.blocks.map((block) => `${block.exercise.id}:${block.sets}`).join('|')
+    return <Session key={sessionKey} blocks={workout.blocks} onExit={() => setTraining(false)} />
   }
 
   return (
@@ -120,6 +133,9 @@ export default function App() {
           <p className="summary">
             预计用时 {formatClock(workout.estimatedSeconds)} · {workout.blocks.length} 个动作
           </p>
+          <button type="button" className="start" onClick={startTraining}>
+            开始训练
+          </button>
           <ol className="workout">
             {workout.blocks.map((block, index) => (
               <li key={block.exercise.id}>

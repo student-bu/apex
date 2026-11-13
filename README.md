@@ -11,8 +11,9 @@ This foundation includes:
 - Three exercise libraries stored as JSON, with one shared schema
 - A pure workout generator, covered by unit tests
 - A single page that shows today's workout and lets you filter libraries, pick 20 / 30 / 45 minutes, or shuffle
+- A guided timer for that workout, covered by unit tests
 
-Later versions can add the interval timer, local completion records, and the streak count. They are intentionally not in this pull request.
+Local completion records and the streak count can come later. The timer does not store a session.
 
 ## Run and test
 
@@ -53,13 +54,29 @@ If a library cannot fill the target without breaking a rule, the result is a sho
 
 `muscleGroup` is the primary pattern used for sequencing, not a complete anatomy label. The HYROX list includes the race stations plus kettlebell swings and dumbbell snatches, which are common accessories in that style of training.
 
+## Guided timer
+
+**开始训练** walks the generated workout one set at a time. The sequence lives in `src/lib/timer.ts` and reuses `REST_SECONDS` and `TRANSITION_SECONDS` from the generator.
+
+- A timed exercise counts down from `defaultSeconds`, then advances on its own
+- A rep exercise shows the target and waits for **完成这组**. Elapsed time still advances
+- Rest between sets uses that exercise's intensity rest. The break between exercises is the 30 second station change. Nothing follows the last set
+- **暂停** freezes the clock. **跳过** moves to the next step and stays paused if the session was already paused. **退出** asks for confirmation, then drops the session
+- **完成这组** still works while paused, and the next step starts running
+- A countdown that hits zero plays a short Web Audio beep. **静音** mutes it for this session only
+- Counted seconds follow wall time while the session is running, including time in a background tab. If a countdown ends in the background, the session stops on the following step instead of skipping past it
+- The finish screen shows the running time. Nothing is written to local storage
+
 ## Project layout
 
 ```
 src/data/exercises.json    seeded libraries
 src/types/exercise.ts      schema, type, and runtime checks
 src/lib/workout.ts         pure generator
+src/lib/timer.ts           pure session timer
+src/lib/beep.ts            countdown beep
 src/App.tsx                today's workout page
+src/Session.tsx            guided session screen
 ```
 
 ## License
