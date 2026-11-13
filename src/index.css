@@ -1,0 +1,184 @@
+:root {
+  color-scheme: light;
+  --bg: #efece4;
+  --ink: #1c1b19;
+  --muted: #5f5b54;
+  --line: #ddd6c8;
+  --accent: #12362c;
+  --paper: #f7f4ee;
+  --warn-bg: #f3e2d4;
+  --warn-ink: #6b3416;
+  font-family: "WenQuanYi Micro Hei", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+button,
+fieldset {
+  font: inherit;
+  color: inherit;
+}
+
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.mark {
+  margin: 0;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0.15rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.day {
+  text-align: right;
+}
+
+.day p,
+.tagline,
+.summary,
+.meta,
+.seed {
+  margin: 0;
+}
+
+.seed,
+.tagline,
+.summary,
+.meta,
+legend {
+  color: var(--muted);
+}
+
+.tagline {
+  margin-top: 0.75rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+button.ghost,
+button.chip {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+button.chip[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+fieldset {
+  border: 0;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 0.45rem;
+  font-size: 0.85rem;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.warning {
+  margin: 1.25rem 0 0;
+  padding: 0.75rem 0.9rem;
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+}
+
+.summary {
+  margin-top: 1.5rem;
+}
+
+.workout {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+}
+
+.workout li {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  gap: 0.35rem 0.75rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.index {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.name,
+.prescription {
+  margin: 0;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.prescription {
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 36rem) {
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .day {
+    text-align: left;
+  }
+}

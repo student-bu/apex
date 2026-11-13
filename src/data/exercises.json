@@ -1,0 +1,302 @@
+[
+  {
+    "id": "strength-bench-press",
+    "name": "杠铃卧推",
+    "library": "strength",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "strength-dumbbell-fly",
+    "name": "哑铃飞鸟",
+    "library": "strength",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "哑铃"
+  },
+  {
+    "id": "strength-pull-up",
+    "name": "引体向上",
+    "library": "strength",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 6,
+    "intensity": 3,
+    "equipment": "单杠"
+  },
+  {
+    "id": "strength-barbell-row",
+    "name": "杠铃划船",
+    "library": "strength",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "strength-shoulder-press",
+    "name": "哑铃肩推",
+    "library": "strength",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "哑铃"
+  },
+  {
+    "id": "strength-back-squat",
+    "name": "杠铃深蹲",
+    "library": "strength",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 5,
+    "intensity": 3,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "strength-romanian-deadlift",
+    "name": "罗马尼亚硬拉",
+    "library": "strength",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "strength-hip-thrust",
+    "name": "臀推",
+    "library": "strength",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "strength-plank",
+    "name": "平板支撑",
+    "library": "strength",
+    "muscleGroup": "core",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 1,
+    "equipment": "瑜伽垫"
+  },
+  {
+    "id": "strength-dumbbell-curl",
+    "name": "哑铃弯举",
+    "library": "strength",
+    "muscleGroup": "arms",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "哑铃"
+  },
+  {
+    "id": "hyrox-ski-erg",
+    "name": "滑雪机",
+    "library": "hyrox",
+    "muscleGroup": "core",
+    "type": "time",
+    "defaultSeconds": 60,
+    "intensity": 2,
+    "equipment": "滑雪机"
+  },
+  {
+    "id": "hyrox-sled-push",
+    "name": "雪橇推",
+    "library": "hyrox",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 3,
+    "equipment": "雪橇"
+  },
+  {
+    "id": "hyrox-sled-pull",
+    "name": "雪橇拉",
+    "library": "hyrox",
+    "muscleGroup": "back",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 3,
+    "equipment": "雪橇"
+  },
+  {
+    "id": "hyrox-burpee-broad-jump",
+    "name": "波比跳远",
+    "library": "hyrox",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 3,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hyrox-row",
+    "name": "划船机",
+    "library": "hyrox",
+    "muscleGroup": "back",
+    "type": "time",
+    "defaultSeconds": 60,
+    "intensity": 2,
+    "equipment": "划船机"
+  },
+  {
+    "id": "hyrox-farmers-carry",
+    "name": "农夫行走",
+    "library": "hyrox",
+    "muscleGroup": "arms",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 2,
+    "equipment": "农夫行走架"
+  },
+  {
+    "id": "hyrox-sandbag-lunge",
+    "name": "沙袋弓步",
+    "library": "hyrox",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 16,
+    "intensity": 2,
+    "equipment": "沙袋"
+  },
+  {
+    "id": "hyrox-wall-ball",
+    "name": "墙球",
+    "library": "hyrox",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 15,
+    "intensity": 3,
+    "equipment": "药球"
+  },
+  {
+    "id": "hyrox-kettlebell-swing",
+    "name": "壶铃摆荡",
+    "library": "hyrox",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 15,
+    "intensity": 2,
+    "equipment": "壶铃"
+  },
+  {
+    "id": "hyrox-dumbbell-snatch",
+    "name": "哑铃抓举",
+    "library": "hyrox",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "哑铃"
+  },
+  {
+    "id": "hiit-jumping-jack",
+    "name": "开合跳",
+    "library": "hiit",
+    "muscleGroup": "shoulders",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 1,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-burpee",
+    "name": "波比跳",
+    "library": "hiit",
+    "muscleGroup": "fullBody",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 3,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-high-knee",
+    "name": "高抬腿",
+    "library": "hiit",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-push-up",
+    "name": "俯卧撑",
+    "library": "hiit",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-jump-squat",
+    "name": "深蹲跳",
+    "library": "hiit",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 3,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-mountain-climber",
+    "name": "登山跑",
+    "library": "hiit",
+    "muscleGroup": "core",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-reverse-lunge",
+    "name": "交替弓步",
+    "library": "hiit",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 16,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-superman",
+    "name": "超人挺身",
+    "library": "hiit",
+    "muscleGroup": "back",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "瑜伽垫"
+  },
+  {
+    "id": "hiit-bench-dip",
+    "name": "椅子臂屈伸",
+    "library": "hiit",
+    "muscleGroup": "arms",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "椅子"
+  },
+  {
+    "id": "hiit-skater",
+    "name": "滑冰跳",
+    "library": "hiit",
+    "muscleGroup": "hamstrings",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 2,
+    "equipment": "徒手"
+  }
+]
