@@ -1,8 +1,8 @@
 # Apex
 
-Apex 是一个混合健身挑战小站：每天从力量、HYROX 功能性动作和 HIIT 间歇里，生成一组随机但合理的训练，帮你走出固定课表。
+Apex 是一个混合健身挑战小站：每天从力量、HYROX 功能站和 HIIT 间歇里，生成一组随机但合理的训练，帮你走出固定课表。
 
-Apex is a small open-source web app for hybrid fitness. It keeps three exercise libraries — strength, HYROX functional movements, and HIIT intervals — and builds one sensible workout for the day instead of repeating a fixed plan.
+Apex is a small open-source web app for hybrid fitness. It keeps three exercise libraries — strength, HYROX race stations, and HIIT intervals — and builds one sensible workout for the day instead of repeating a fixed plan.
 
 ## MVP
 
@@ -51,7 +51,17 @@ Estimated work is 4 seconds per rep, or `defaultSeconds` for timed exercises. Re
 
 If a library cannot fill the target without breaking a rule, the result is a shorter valid workout (`shortened`) or an empty one (`unsatisfiable`). An empty selection returns `no-libraries`. The page shows these states in Chinese and does not throw.
 
-`muscleGroup` is the primary pattern used for sequencing, not a complete anatomy label. The HYROX list includes the race stations plus kettlebell swings and dumbbell snatches, which are common accessories in that style of training.
+`muscleGroup` is the primary pattern used for sequencing, not a complete anatomy label. Library defaults stay inside the generator caps: 1–50 reps, or 1–180 seconds. HYROX doses are shorter training pieces, not a full race.
+
+## 数据来源
+
+HIIT 库在原有间歇动作上，并入了从 Open WOD Database 选出的常见间歇动作。波比跳、俯卧撑、登山跑这三条本来就在库里，合并时没有再加一遍。新增动作的中文名是翻译，次数和秒数按上面的训练剂量改写，不是数据库里的原始课表。
+
+Open WOD Database (https://github.com/WodWiz/open-wod-db, https://www.wodwiz.com/benchmarks), CC BY 4.0。动作经过改编和翻译。CrossFit 是商标。这些条目只是常见体能动作的结构化整理，不表示 CrossFit 官方授权或关联。
+
+HYROX 库按公开赛制写成 8 个功能站，站与站之间是跑步：SkiErg、Sled Push、Sled Pull、Burpee Broad Jump、Rowing、Farmers Carry、Sandbag Lunges、Wall Balls，外加 1 km 跑。条目里的时间和次数是训练量，例如几十秒的滑雪机或划船机、十几次墙球，不是比赛的 1000 m、100 次或整段 1 km。没有滑雪机、雪橇、划船机、壶铃、沙袋或药球时，用阻力带、哑铃、单车、立定跳远等替代，并在 `equipment` 里写明「替代」哪一站。
+
+站点要点和无器械替代的取舍，参考了 HYROX 中文备赛手册（https://github.com/fisha1616/hyrox-training-skill，MIT）。手册里的说明已改写成 Apex 自己的结构化条目，没有照搬原文。HYROX 是商标。本库不表示赛事方授权。
 
 ## Project layout
 

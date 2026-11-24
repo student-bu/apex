@@ -141,8 +141,20 @@ describe('workout generator', () => {
     )
   })
 
-  it('fills a valid target workout from the seeded libraries', () => {
-    const seeds = ['2026-11-13', '2026-01-01', '2026-07-04', 'portfolio', 'shuffle-9']
+  it('keeps every library and duration inside the generator rules across seeds', () => {
+    const seeds = [
+      '2026-11-13',
+      '2026-01-01',
+      '2026-07-04',
+      '2026-11-24',
+      '2026-02-17',
+      '2026-12-31',
+      'portfolio',
+      'shuffle-9',
+      'apex',
+      'interval',
+      'station',
+    ]
     const selections: Library[][] = [['strength'], ['hyrox'], ['hiit'], ['strength', 'hyrox', 'hiit']]
     for (const libraries of selections) {
       for (const durationMinutes of DURATION_OPTIONS) {

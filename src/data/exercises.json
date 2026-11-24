@@ -100,14 +100,34 @@
     "equipment": "哑铃"
   },
   {
+    "id": "hyrox-run",
+    "name": "跑步",
+    "library": "hyrox",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 90,
+    "intensity": 2,
+    "equipment": "跑道"
+  },
+  {
     "id": "hyrox-ski-erg",
     "name": "滑雪机",
     "library": "hyrox",
-    "muscleGroup": "core",
+    "muscleGroup": "back",
     "type": "time",
-    "defaultSeconds": 60,
+    "defaultSeconds": 75,
     "intensity": 2,
     "equipment": "滑雪机"
+  },
+  {
+    "id": "hyrox-band-pulldown",
+    "name": "阻力带下拉",
+    "library": "hyrox",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "阻力带（替代滑雪机）"
   },
   {
     "id": "hyrox-sled-push",
@@ -120,6 +140,16 @@
     "equipment": "雪橇"
   },
   {
+    "id": "hyrox-band-lean-walk",
+    "name": "阻力带前倾走",
+    "library": "hyrox",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 2,
+    "equipment": "阻力带（替代雪橇推）"
+  },
+  {
     "id": "hyrox-sled-pull",
     "name": "雪橇拉",
     "library": "hyrox",
@@ -130,14 +160,34 @@
     "equipment": "雪橇"
   },
   {
+    "id": "hyrox-band-row",
+    "name": "阻力带划船",
+    "library": "hyrox",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "阻力带（替代雪橇拉）"
+  },
+  {
     "id": "hyrox-burpee-broad-jump",
     "name": "波比跳远",
     "library": "hyrox",
     "muscleGroup": "fullBody",
     "type": "reps",
-    "defaultReps": 12,
+    "defaultReps": 8,
     "intensity": 3,
     "equipment": "徒手"
+  },
+  {
+    "id": "hyrox-broad-jump",
+    "name": "立定跳远",
+    "library": "hyrox",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 6,
+    "intensity": 2,
+    "equipment": "徒手（替代波比跳远）"
   },
   {
     "id": "hyrox-row",
@@ -145,9 +195,19 @@
     "library": "hyrox",
     "muscleGroup": "back",
     "type": "time",
-    "defaultSeconds": 60,
+    "defaultSeconds": 75,
     "intensity": 2,
     "equipment": "划船机"
+  },
+  {
+    "id": "hyrox-bike-interval",
+    "name": "单车间歇",
+    "library": "hyrox",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 75,
+    "intensity": 1,
+    "equipment": "单车（替代划船机）"
   },
   {
     "id": "hyrox-farmers-carry",
@@ -155,9 +215,19 @@
     "library": "hyrox",
     "muscleGroup": "arms",
     "type": "time",
-    "defaultSeconds": 40,
+    "defaultSeconds": 45,
     "intensity": 2,
-    "equipment": "农夫行走架"
+    "equipment": "壶铃"
+  },
+  {
+    "id": "hyrox-dumbbell-carry",
+    "name": "哑铃农夫走",
+    "library": "hyrox",
+    "muscleGroup": "arms",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 1,
+    "equipment": "哑铃（替代农夫行走）"
   },
   {
     "id": "hyrox-sandbag-lunge",
@@ -165,9 +235,19 @@
     "library": "hyrox",
     "muscleGroup": "glutes",
     "type": "reps",
-    "defaultReps": 16,
+    "defaultReps": 12,
     "intensity": 2,
     "equipment": "沙袋"
+  },
+  {
+    "id": "hyrox-dumbbell-lunge",
+    "name": "哑铃弓步",
+    "library": "hyrox",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "哑铃（替代沙袋弓步）"
   },
   {
     "id": "hyrox-wall-ball",
@@ -180,24 +260,14 @@
     "equipment": "药球"
   },
   {
-    "id": "hyrox-kettlebell-swing",
-    "name": "壶铃摆荡",
+    "id": "hyrox-dumbbell-thruster",
+    "name": "哑铃深蹲推",
     "library": "hyrox",
-    "muscleGroup": "hamstrings",
+    "muscleGroup": "shoulders",
     "type": "reps",
-    "defaultReps": 15,
+    "defaultReps": 10,
     "intensity": 2,
-    "equipment": "壶铃"
-  },
-  {
-    "id": "hyrox-dumbbell-snatch",
-    "name": "哑铃抓举",
-    "library": "hyrox",
-    "muscleGroup": "fullBody",
-    "type": "reps",
-    "defaultReps": 8,
-    "intensity": 2,
-    "equipment": "哑铃"
+    "equipment": "哑铃（替代墙球）"
   },
   {
     "id": "hiit-jumping-jack",
@@ -294,6 +364,176 @@
     "name": "滑冰跳",
     "library": "hiit",
     "muscleGroup": "hamstrings",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-box-jump",
+    "name": "跳箱",
+    "library": "hiit",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "跳箱"
+  },
+  {
+    "id": "hiit-kettlebell-swing",
+    "name": "壶铃摆荡",
+    "library": "hiit",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 15,
+    "intensity": 2,
+    "equipment": "壶铃"
+  },
+  {
+    "id": "hiit-thruster",
+    "name": "深蹲推举",
+    "library": "hiit",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 3,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "hiit-double-under",
+    "name": "双摇跳绳",
+    "library": "hiit",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 20,
+    "intensity": 2,
+    "equipment": "跳绳"
+  },
+  {
+    "id": "hiit-wall-ball",
+    "name": "墙球",
+    "library": "hiit",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "药球"
+  },
+  {
+    "id": "hiit-air-squat",
+    "name": "徒手深蹲",
+    "library": "hiit",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 20,
+    "intensity": 1,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-sit-up",
+    "name": "仰卧起坐",
+    "library": "hiit",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 15,
+    "intensity": 1,
+    "equipment": "瑜伽垫"
+  },
+  {
+    "id": "hiit-hand-release-push-up",
+    "name": "离手俯卧撑",
+    "library": "hiit",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-ball-slam",
+    "name": "药球砸地",
+    "library": "hiit",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "药球"
+  },
+  {
+    "id": "hiit-toes-to-bar",
+    "name": "脚触杠",
+    "library": "hiit",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 3,
+    "equipment": "单杠"
+  },
+  {
+    "id": "hiit-v-up",
+    "name": "两头起",
+    "library": "hiit",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "瑜伽垫"
+  },
+  {
+    "id": "hiit-push-press",
+    "name": "借力推举",
+    "library": "hiit",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "hiit-sumo-deadlift-high-pull",
+    "name": "相扑硬拉高拉",
+    "library": "hiit",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "杠铃"
+  },
+  {
+    "id": "hiit-goblet-squat",
+    "name": "高脚杯深蹲",
+    "library": "hiit",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "壶铃"
+  },
+  {
+    "id": "hiit-jumping-lunge",
+    "name": "跳换弓步",
+    "library": "hiit",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "徒手"
+  },
+  {
+    "id": "hiit-box-step-up",
+    "name": "登箱",
+    "library": "hiit",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 16,
+    "intensity": 1,
+    "equipment": "跳箱"
+  },
+  {
+    "id": "hiit-bear-crawl",
+    "name": "熊爬",
+    "library": "hiit",
+    "muscleGroup": "core",
     "type": "time",
     "defaultSeconds": 30,
     "intensity": 2,
