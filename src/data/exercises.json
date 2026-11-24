@@ -8,6 +8,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-bench-press.jpg"
   },
   {
@@ -19,6 +20,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-incline-bench-press.jpg"
   },
   {
@@ -30,6 +32,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-dumbbell-bench-press.jpg"
   },
   {
@@ -41,6 +44,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-dumbbell-fly.jpg"
   },
   {
@@ -52,6 +56,7 @@
     "defaultReps": 12,
     "intensity": 2,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-push-up.jpg"
   },
   {
@@ -63,6 +68,7 @@
     "defaultReps": 6,
     "intensity": 3,
     "equipment": "单杠",
+    "jumping": false,
     "image": "exercises/strength-pull-up.jpg"
   },
   {
@@ -74,6 +80,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-barbell-row.jpg"
   },
   {
@@ -85,6 +92,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-dumbbell-row.jpg"
   },
   {
@@ -96,6 +104,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "绳索",
+    "jumping": false,
     "image": "exercises/strength-lat-pulldown.jpg"
   },
   {
@@ -107,6 +116,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "绳索",
+    "jumping": false,
     "image": "exercises/strength-seated-row.jpg"
   },
   {
@@ -118,6 +128,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-barbell-press.jpg"
   },
   {
@@ -129,6 +140,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-shoulder-press.jpg"
   },
   {
@@ -140,6 +152,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "壶铃",
+    "jumping": false,
     "image": "exercises/strength-kettlebell-press.jpg"
   },
   {
@@ -151,6 +164,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-lateral-raise.jpg"
   },
   {
@@ -162,6 +176,7 @@
     "defaultReps": 15,
     "intensity": 1,
     "equipment": "绳索",
+    "jumping": false,
     "image": "exercises/strength-face-pull.jpg"
   },
   {
@@ -173,6 +188,7 @@
     "defaultReps": 10,
     "intensity": 1,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-barbell-curl.jpg"
   },
   {
@@ -184,6 +200,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-dumbbell-curl.jpg"
   },
   {
@@ -195,6 +212,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-hammer-curl.jpg"
   },
   {
@@ -206,6 +224,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "绳索",
+    "jumping": false,
     "image": "exercises/strength-triceps-pushdown.jpg"
   },
   {
@@ -217,6 +236,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "双杠",
+    "jumping": false,
     "image": "exercises/strength-dip.jpg"
   },
   {
@@ -228,6 +248,7 @@
     "defaultSeconds": 40,
     "intensity": 1,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-plank.jpg"
   },
   {
@@ -239,6 +260,7 @@
     "defaultReps": 10,
     "intensity": 1,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-dead-bug.jpg"
   },
   {
@@ -250,6 +272,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "单杠",
+    "jumping": false,
     "image": "exercises/strength-hanging-leg-raise.jpg"
   },
   {
@@ -261,6 +284,7 @@
     "defaultReps": 15,
     "intensity": 1,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-crunch.jpg"
   },
   {
@@ -272,6 +296,7 @@
     "defaultReps": 16,
     "intensity": 1,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-russian-twist.jpg"
   },
   {
@@ -283,6 +308,7 @@
     "defaultReps": 5,
     "intensity": 3,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-back-squat.jpg"
   },
   {
@@ -294,6 +320,7 @@
     "defaultReps": 5,
     "intensity": 3,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-front-squat.jpg"
   },
   {
@@ -305,6 +332,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "壶铃",
+    "jumping": false,
     "image": "exercises/strength-goblet-squat.jpg"
   },
   {
@@ -316,6 +344,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-dumbbell-lunge.jpg"
   },
   {
@@ -327,6 +356,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "器械",
+    "jumping": false,
     "image": "exercises/strength-leg-press.jpg"
   },
   {
@@ -338,6 +368,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-romanian-deadlift.jpg"
   },
   {
@@ -349,6 +380,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "哑铃",
+    "jumping": false,
     "image": "exercises/strength-dumbbell-rdl.jpg"
   },
   {
@@ -360,6 +392,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "器械",
+    "jumping": false,
     "image": "exercises/strength-leg-curl.jpg"
   },
   {
@@ -371,6 +404,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "壶铃",
+    "jumping": false,
     "image": "exercises/strength-kettlebell-single-leg-deadlift.jpg"
   },
   {
@@ -382,6 +416,7 @@
     "defaultReps": 10,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-hip-thrust.jpg"
   },
   {
@@ -393,6 +428,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-glute-bridge.jpg"
   },
   {
@@ -404,6 +440,7 @@
     "defaultReps": 12,
     "intensity": 1,
     "equipment": "自重",
+    "jumping": false,
     "image": "exercises/strength-glute-kickback.jpg"
   },
   {
@@ -415,6 +452,7 @@
     "defaultReps": 6,
     "intensity": 2,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-sumo-deadlift.jpg"
   },
   {
@@ -426,6 +464,7 @@
     "defaultReps": 5,
     "intensity": 3,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-deadlift.jpg"
   },
   {
@@ -437,6 +476,7 @@
     "defaultReps": 3,
     "intensity": 3,
     "equipment": "杠铃",
+    "jumping": false,
     "image": "exercises/strength-power-clean.jpg"
   },
   {
@@ -448,6 +488,7 @@
     "defaultReps": 5,
     "intensity": 2,
     "equipment": "壶铃",
+    "jumping": false,
     "image": "exercises/strength-turkish-get-up.jpg"
   },
   {
@@ -459,6 +500,7 @@
     "defaultReps": 8,
     "intensity": 2,
     "equipment": "壶铃",
+    "jumping": false,
     "image": "exercises/strength-kettlebell-snatch.jpg"
   },
   {
@@ -469,7 +511,8 @@
     "type": "time",
     "defaultSeconds": 90,
     "intensity": 2,
-    "equipment": "跑道"
+    "equipment": "跑道",
+    "jumping": false
   },
   {
     "id": "hyrox-ski-erg",
@@ -479,7 +522,8 @@
     "type": "time",
     "defaultSeconds": 75,
     "intensity": 2,
-    "equipment": "滑雪机"
+    "equipment": "滑雪机",
+    "jumping": false
   },
   {
     "id": "hyrox-band-pulldown",
@@ -489,7 +533,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 1,
-    "equipment": "阻力带（替代滑雪机）"
+    "equipment": "阻力带（替代滑雪机）",
+    "jumping": false
   },
   {
     "id": "hyrox-sled-push",
@@ -499,7 +544,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 3,
-    "equipment": "雪橇"
+    "equipment": "雪橇",
+    "jumping": false
   },
   {
     "id": "hyrox-band-lean-walk",
@@ -509,7 +555,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 2,
-    "equipment": "阻力带（替代雪橇推）"
+    "equipment": "阻力带（替代雪橇推）",
+    "jumping": false
   },
   {
     "id": "hyrox-sled-pull",
@@ -519,7 +566,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 3,
-    "equipment": "雪橇"
+    "equipment": "雪橇",
+    "jumping": false
   },
   {
     "id": "hyrox-band-row",
@@ -529,7 +577,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "阻力带（替代雪橇拉）"
+    "equipment": "阻力带（替代雪橇拉）",
+    "jumping": false
   },
   {
     "id": "hyrox-burpee-broad-jump",
@@ -539,7 +588,8 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 3,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hyrox-broad-jump",
@@ -549,7 +599,8 @@
     "type": "reps",
     "defaultReps": 6,
     "intensity": 2,
-    "equipment": "徒手（替代波比跳远）"
+    "equipment": "徒手（替代波比跳远）",
+    "jumping": true
   },
   {
     "id": "hyrox-row",
@@ -559,7 +610,8 @@
     "type": "time",
     "defaultSeconds": 75,
     "intensity": 2,
-    "equipment": "划船机"
+    "equipment": "划船机",
+    "jumping": false
   },
   {
     "id": "hyrox-bike-interval",
@@ -569,7 +621,8 @@
     "type": "time",
     "defaultSeconds": 75,
     "intensity": 1,
-    "equipment": "单车（替代划船机）"
+    "equipment": "单车（替代划船机）",
+    "jumping": false
   },
   {
     "id": "hyrox-farmers-carry",
@@ -579,7 +632,8 @@
     "type": "time",
     "defaultSeconds": 45,
     "intensity": 2,
-    "equipment": "壶铃"
+    "equipment": "壶铃",
+    "jumping": false
   },
   {
     "id": "hyrox-dumbbell-carry",
@@ -589,7 +643,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 1,
-    "equipment": "哑铃（替代农夫行走）"
+    "equipment": "哑铃（替代农夫行走）",
+    "jumping": false
   },
   {
     "id": "hyrox-sandbag-lunge",
@@ -599,7 +654,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "沙袋"
+    "equipment": "沙袋",
+    "jumping": false
   },
   {
     "id": "hyrox-dumbbell-lunge",
@@ -609,7 +665,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 1,
-    "equipment": "哑铃（替代沙袋弓步）"
+    "equipment": "哑铃（替代沙袋弓步）",
+    "jumping": false
   },
   {
     "id": "hyrox-wall-ball",
@@ -619,7 +676,8 @@
     "type": "reps",
     "defaultReps": 15,
     "intensity": 3,
-    "equipment": "药球"
+    "equipment": "药球",
+    "jumping": false
   },
   {
     "id": "hyrox-dumbbell-thruster",
@@ -629,7 +687,8 @@
     "type": "reps",
     "defaultReps": 10,
     "intensity": 2,
-    "equipment": "哑铃（替代墙球）"
+    "equipment": "哑铃（替代墙球）",
+    "jumping": false
   },
   {
     "id": "hiit-jumping-jack",
@@ -639,7 +698,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 1,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hiit-burpee",
@@ -649,7 +709,8 @@
     "type": "time",
     "defaultSeconds": 30,
     "intensity": 3,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hiit-high-knee",
@@ -659,7 +720,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hiit-push-up",
@@ -669,7 +731,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": false
   },
   {
     "id": "hiit-jump-squat",
@@ -679,7 +742,8 @@
     "type": "time",
     "defaultSeconds": 30,
     "intensity": 3,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hiit-mountain-climber",
@@ -689,7 +753,8 @@
     "type": "time",
     "defaultSeconds": 40,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": false
   },
   {
     "id": "hiit-reverse-lunge",
@@ -699,7 +764,8 @@
     "type": "reps",
     "defaultReps": 16,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": false
   },
   {
     "id": "hiit-superman",
@@ -709,7 +775,8 @@
     "type": "time",
     "defaultSeconds": 30,
     "intensity": 1,
-    "equipment": "瑜伽垫"
+    "equipment": "瑜伽垫",
+    "jumping": false
   },
   {
     "id": "hiit-bench-dip",
@@ -719,7 +786,8 @@
     "type": "reps",
     "defaultReps": 10,
     "intensity": 2,
-    "equipment": "椅子"
+    "equipment": "椅子",
+    "jumping": false
   },
   {
     "id": "hiit-skater",
@@ -729,7 +797,8 @@
     "type": "time",
     "defaultSeconds": 30,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hiit-box-jump",
@@ -739,7 +808,8 @@
     "type": "reps",
     "defaultReps": 10,
     "intensity": 2,
-    "equipment": "跳箱"
+    "equipment": "跳箱",
+    "jumping": true
   },
   {
     "id": "hiit-kettlebell-swing",
@@ -749,7 +819,8 @@
     "type": "reps",
     "defaultReps": 15,
     "intensity": 2,
-    "equipment": "壶铃"
+    "equipment": "壶铃",
+    "jumping": false
   },
   {
     "id": "hiit-thruster",
@@ -759,7 +830,8 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 3,
-    "equipment": "杠铃"
+    "equipment": "杠铃",
+    "jumping": false
   },
   {
     "id": "hiit-double-under",
@@ -769,7 +841,8 @@
     "type": "reps",
     "defaultReps": 20,
     "intensity": 2,
-    "equipment": "跳绳"
+    "equipment": "跳绳",
+    "jumping": true
   },
   {
     "id": "hiit-wall-ball",
@@ -779,7 +852,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "药球"
+    "equipment": "药球",
+    "jumping": false
   },
   {
     "id": "hiit-air-squat",
@@ -789,7 +863,8 @@
     "type": "reps",
     "defaultReps": 20,
     "intensity": 1,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": false
   },
   {
     "id": "hiit-sit-up",
@@ -799,7 +874,8 @@
     "type": "reps",
     "defaultReps": 15,
     "intensity": 1,
-    "equipment": "瑜伽垫"
+    "equipment": "瑜伽垫",
+    "jumping": false
   },
   {
     "id": "hiit-hand-release-push-up",
@@ -809,7 +885,8 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": false
   },
   {
     "id": "hiit-ball-slam",
@@ -819,7 +896,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "药球"
+    "equipment": "药球",
+    "jumping": false
   },
   {
     "id": "hiit-toes-to-bar",
@@ -829,7 +907,8 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 3,
-    "equipment": "单杠"
+    "equipment": "单杠",
+    "jumping": false
   },
   {
     "id": "hiit-v-up",
@@ -839,7 +918,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "瑜伽垫"
+    "equipment": "瑜伽垫",
+    "jumping": false
   },
   {
     "id": "hiit-push-press",
@@ -849,7 +929,8 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 2,
-    "equipment": "杠铃"
+    "equipment": "杠铃",
+    "jumping": false
   },
   {
     "id": "hiit-sumo-deadlift-high-pull",
@@ -859,7 +940,8 @@
     "type": "reps",
     "defaultReps": 10,
     "intensity": 2,
-    "equipment": "杠铃"
+    "equipment": "杠铃",
+    "jumping": false
   },
   {
     "id": "hiit-goblet-squat",
@@ -869,7 +951,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "壶铃"
+    "equipment": "壶铃",
+    "jumping": false
   },
   {
     "id": "hiit-jumping-lunge",
@@ -879,7 +962,8 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": true
   },
   {
     "id": "hiit-box-step-up",
@@ -889,7 +973,8 @@
     "type": "reps",
     "defaultReps": 16,
     "intensity": 1,
-    "equipment": "跳箱"
+    "equipment": "跳箱",
+    "jumping": false
   },
   {
     "id": "hiit-bear-crawl",
@@ -899,6 +984,261 @@
     "type": "time",
     "defaultSeconds": 30,
     "intensity": 2,
-    "equipment": "徒手"
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-arm-circles",
+    "name": "手臂绕环",
+    "library": "warmup",
+    "muscleGroup": "shoulders",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-leg-swing",
+    "name": "直腿摆动",
+    "library": "warmup",
+    "muscleGroup": "hamstrings",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-hip-circle",
+    "name": "髋部绕环",
+    "library": "warmup",
+    "muscleGroup": "glutes",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-inchworm",
+    "name": "毛毛虫式",
+    "library": "warmup",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 6,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-cat-cow",
+    "name": "猫牛式",
+    "library": "warmup",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-torso-twist",
+    "name": "站姿转体",
+    "library": "warmup",
+    "muscleGroup": "core",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-lunge-twist",
+    "name": "弓步转体",
+    "library": "warmup",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 6,
+    "intensity": 2,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-glute-bridge",
+    "name": "臀桥激活",
+    "library": "warmup",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false
+  },
+  {
+    "id": "warmup-jumping-jack",
+    "name": "开合跳",
+    "library": "warmup",
+    "muscleGroup": "fullBody",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 2,
+    "equipment": "徒手",
+    "jumping": true
+  },
+  {
+    "id": "warmup-high-knee",
+    "name": "高抬腿",
+    "library": "warmup",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 20,
+    "intensity": 3,
+    "equipment": "徒手",
+    "jumping": true
+  },
+  {
+    "id": "stretch-hamstring",
+    "name": "站姿腘绳肌拉伸",
+    "library": "stretch",
+    "muscleGroup": "hamstrings",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-hamstring.jpg"
+  },
+  {
+    "id": "stretch-seated-hamstring",
+    "name": "坐姿腘绳肌拉伸",
+    "library": "stretch",
+    "muscleGroup": "hamstrings",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-seated-hamstring.jpg"
+  },
+  {
+    "id": "stretch-side-quad",
+    "name": "侧卧股四头拉伸",
+    "library": "stretch",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-side-quad.jpg"
+  },
+  {
+    "id": "stretch-hip-flexor",
+    "name": "跪姿髋屈肌拉伸",
+    "library": "stretch",
+    "muscleGroup": "quads",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-hip-flexor.jpg"
+  },
+  {
+    "id": "stretch-chest",
+    "name": "双手后伸扩胸",
+    "library": "stretch",
+    "muscleGroup": "chest",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-chest.jpg"
+  },
+  {
+    "id": "stretch-shoulder",
+    "name": "肩部交叉拉伸",
+    "library": "stretch",
+    "muscleGroup": "shoulders",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-shoulder.jpg"
+  },
+  {
+    "id": "stretch-triceps",
+    "name": "过头三头肌拉伸",
+    "library": "stretch",
+    "muscleGroup": "arms",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-triceps.jpg"
+  },
+  {
+    "id": "stretch-child",
+    "name": "婴儿式",
+    "library": "stretch",
+    "muscleGroup": "back",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-child.jpg"
+  },
+  {
+    "id": "stretch-glute",
+    "name": "仰卧交叉抱膝",
+    "library": "stretch",
+    "muscleGroup": "glutes",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-glute.jpg"
+  },
+  {
+    "id": "stretch-upper-back",
+    "name": "上背拉伸",
+    "library": "stretch",
+    "muscleGroup": "back",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-upper-back.jpg"
+  },
+  {
+    "id": "stretch-side-bend",
+    "name": "站姿侧向拉伸",
+    "library": "stretch",
+    "muscleGroup": "core",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-side-bend.jpg"
+  },
+  {
+    "id": "stretch-knee-to-chest",
+    "name": "单膝抱胸",
+    "library": "stretch",
+    "muscleGroup": "glutes",
+    "type": "time",
+    "defaultSeconds": 30,
+    "intensity": 1,
+    "equipment": "徒手",
+    "jumping": false,
+    "image": "exercises/stretch-knee-to-chest.jpg"
   }
 ]

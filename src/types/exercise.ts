@@ -1,4 +1,4 @@
-export const LIBRARIES = ['strength', 'hyrox', 'hiit'] as const
+export const LIBRARIES = ['strength', 'hyrox', 'hiit', 'warmup', 'stretch'] as const
 export type Library = (typeof LIBRARIES)[number]
 
 /** Primary pattern used to keep neighboring exercises from repeating the same emphasis. */
@@ -27,6 +27,8 @@ type ExerciseBase = {
   muscleGroup: MuscleGroup
   intensity: Intensity
   equipment: string
+  /** True when the movement leaves the ground: burpee, jump, high knees, double under, and the like. */
+  jumping: boolean
   /** Photo under `public/`, relative to the Vite base. Example: `exercises/strength-bench-press.jpg`. */
   image?: string
 }
@@ -43,7 +45,7 @@ export type TimeExercise = ExerciseBase & {
 
 export type Exercise = RepsExercise | TimeExercise
 
-const SHARED_KEYS = ['id', 'name', 'library', 'muscleGroup', 'type', 'intensity', 'equipment'] as const
+const SHARED_KEYS = ['id', 'name', 'library', 'muscleGroup', 'type', 'intensity', 'equipment', 'jumping'] as const
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const IMAGE_PATTERN = /^exercises\/[a-z0-9]+(?:-[a-z0-9]+)*\.jpg$/
 const HAN_PATTERN = /\p{Script=Han}/u
@@ -131,6 +133,10 @@ export function validateCatalog(value: unknown): string[] {
 
     if (typeof entry.equipment !== 'string' || entry.equipment.trim() === '') {
       errors.push(`${prefix}.equipment must be a non-empty string`)
+    }
+
+    if (typeof entry.jumping !== 'boolean') {
+      errors.push(`${prefix}.jumping must be a boolean`)
     }
   })
 

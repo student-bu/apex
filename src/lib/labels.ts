@@ -1,10 +1,20 @@
 import type { Library, MuscleGroup } from '../types/exercise.ts'
-import type { WorkoutWarning } from './workout.ts'
+import type { PlanRole, PlanWarning } from './plan.ts'
+import type { FitnessLevel, Goal } from './profile.ts'
 
 export const LIBRARY_LABEL: Record<Library, string> = {
   strength: '力量',
   hyrox: 'HYROX',
   hiit: 'HIIT',
+  warmup: '热身',
+  stretch: '拉伸',
+}
+
+export const ROLE_LABEL: Record<PlanRole, string> = {
+  warmup: '热身',
+  strength: '力量',
+  bodyweight: '徒手',
+  stretch: '拉伸',
 }
 
 export const MUSCLE_LABEL: Record<MuscleGroup, string> = {
@@ -19,9 +29,18 @@ export const MUSCLE_LABEL: Record<MuscleGroup, string> = {
   fullBody: '全身',
 }
 
-export const WARNING_LABEL: Record<WorkoutWarning, string> = {
-  'no-libraries': '请至少选择一个动作库。',
-  'empty-pool': '所选动作库里没有可用动作。',
-  shortened: '这些动作无法在规则内排满此时长，已缩短这组训练。',
-  unsatisfiable: '按当前条件排不出一组有效训练。',
+export const FITNESS_LABEL: Record<FitnessLevel, string> = {
+  beginner: '新手',
+  foundation: '有基础',
+  advanced: '进阶',
+}
+
+export const GOAL_LABEL: Record<Goal, string> = {
+  muscle: '增肌',
+  fatLoss: '减脂',
+  strength: '力量',
+}
+
+export const WARNING_LABEL: Record<PlanWarning, string> = {
+  incomplete: '可用动作不够排满完整课表，已按规则尽量安排。',
 }

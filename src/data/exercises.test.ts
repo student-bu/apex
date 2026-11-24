@@ -1,4 +1,4 @@
-import { existsSync, statSync } from 'node:fs'
+import { existsSync, readFileSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import data from './exercises.json'
@@ -19,6 +19,47 @@ const HYROX_STATION_IDS = [
   'hyrox-sandbag-lunge',
   'hyrox-wall-ball',
 ]
+
+/** Movements that leave the ground. High knees has no 跳 in the Chinese name, so it is listed here. */
+const JUMPING_IDS = [
+  'hiit-burpee',
+  'hiit-jumping-jack',
+  'hiit-jump-squat',
+  'hiit-box-jump',
+  'hiit-skater',
+  'hiit-jumping-lunge',
+  'hiit-double-under',
+  'hiit-high-knee',
+  'hyrox-burpee-broad-jump',
+  'hyrox-broad-jump',
+  'warmup-jumping-jack',
+  'warmup-high-knee',
+]
+
+function jpegSize(file: string): { width: number; height: number } {
+  const buffer = readFileSync(file)
+  let offset = 2
+  while (offset + 9 < buffer.length) {
+    if (buffer[offset] !== 0xff) {
+      offset += 1
+      continue
+    }
+    const marker = buffer[offset + 1] ?? 0
+    if (marker === 0xc0 || marker === 0xc1 || marker === 0xc2) {
+      return {
+        height: buffer.readUInt16BE(offset + 5),
+        width: buffer.readUInt16BE(offset + 7),
+      }
+    }
+    if (marker === 0xd8 || marker === 0xd9 || (marker >= 0xd0 && marker <= 0xd7)) {
+      offset += 2
+      continue
+    }
+    const length = buffer.readUInt16BE(offset + 2)
+    offset += 2 + length
+  }
+  throw new Error(`No JPEG size in ${file}`)
+}
 
 /** Open WOD movements merged into HIIT. Ones already in the library stay as the original ids. */
 const HIIT_MERGED_IDS = [
@@ -61,6 +102,7 @@ describe('exercise catalog', () => {
       expect(MUSCLE_GROUPS, exercise.id).toContain(exercise.muscleGroup)
       expect(EXERCISE_TYPES, exercise.id).toContain(exercise.type)
       expect([1, 2, 3], exercise.id).toContain(exercise.intensity)
+      expect(typeof exercise.jumping, exercise.id).toBe('boolean')
       expect(exercise.equipment.trim(), exercise.id).not.toBe('')
       if (exercise.type === 'reps') {
         expect(exercise.defaultReps, exercise.id).toBeGreaterThanOrEqual(1)
@@ -107,6 +149,8 @@ describe('exercise catalog', () => {
       const file = resolve('public', image)
       expect(existsSync(file), file).toBe(true)
       expect(statSync(file).size, file).toBeGreaterThan(1000)
+      const { width, height } = jpegSize(file)
+      expect(Math.max(width, height), file).toBeLessThanOrEqual(480)
     }
   })
 
@@ -129,11 +173,14 @@ describe('exercise catalog', () => {
     expect(byLibrary.strength).toHaveLength(42)
     expect(byLibrary.hyrox).toHaveLength(17)
     expect(byLibrary.hiit).toHaveLength(27)
-    for (const library of LIBRARIES) {
+    expect(byLibrary.warmup).toHaveLength(10)
+    expect(byLibrary.stretch).toHaveLength(12)
+    for (const library of ['strength', 'hyrox', 'hiit', 'warmup'] as const) {
       expect(new Set(byLibrary[library]?.map((exercise) => exercise.type)), library).toEqual(
         new Set(['reps', 'time']),
       )
     }
+    expect(new Set(byLibrary.stretch?.map((exercise) => exercise.type))).toEqual(new Set(['time']))
   })
 
   it('lists the HYROX run and eight stations, with substitutes marked on the equipment', () => {
@@ -173,11 +220,15 @@ describe('exercise catalog', () => {
 
   it('rejects a broken entry instead of treating the schema as optional', () => {
     const [first] = data
-    const broken = { ...first, name: 'Bench press', intensity: 5, extra: true }
+    const broken = { ...first, name: 'Bench press', intensity: 5, jumping: 'no', extra: true }
     const errors = validateCatalog([broken])
     expect(errors.some((error) => error.includes('name'))).toBe(true)
     expect(errors.some((error) => error.includes('intensity'))).toBe(true)
+    expect(errors.some((error) => error.includes('jumping'))).toBe(true)
     expect(errors.some((error) => error.includes('extra'))).toBe(true)
+    const { jumping, ...withoutJumping } = first
+    expect(jumping).toBe(false)
+    expect(validateCatalog([withoutJumping]).some((error) => error.includes('jumping'))).toBe(true)
   })
 
   it('allows a missing image and rejects a bad image path', () => {
@@ -190,6 +241,37 @@ describe('exercise catalog', () => {
     expect(validateCatalog([withoutImage])).toEqual([])
     const errors = validateCatalog([{ ...first, image: '../secret.jpg' }])
     expect(errors.some((error) => error.includes('image'))).toBe(true)
+  })
+
+  it('marks jumping movements and keeps warm-up and stretch in the same schema', () => {
+    const jumping = data.filter((exercise) => exercise.jumping).map((exercise) => exercise.id)
+    expect(jumping.sort()).toEqual([...JUMPING_IDS].sort())
+    for (const exercise of data) {
+      if (exercise.name.includes('跳')) expect(exercise.jumping, exercise.id).toBe(true)
+    }
+    for (const id of ['strength-plank', 'hyrox-sled-push', 'hyrox-row', 'hiit-push-up', 'hiit-box-step-up']) {
+      expect(data.find((exercise) => exercise.id === id)?.jumping, id).toBe(false)
+    }
+
+    const warmup = data.filter((exercise) => exercise.library === 'warmup')
+    expect(warmup).toHaveLength(10)
+    expect(warmup.some((exercise) => exercise.jumping)).toBe(true)
+    expect(warmup.some((exercise) => !exercise.jumping)).toBe(true)
+    for (const exercise of warmup) expect(exercise, exercise.id).not.toHaveProperty('image')
+
+    const stretch = data.filter((exercise) => exercise.library === 'stretch')
+    expect(stretch).toHaveLength(12)
+    for (const exercise of stretch) {
+      expect(exercise.jumping, exercise.id).toBe(false)
+      expect(exercise.type, exercise.id).toBe('time')
+      const image = 'image' in exercise ? exercise.image : undefined
+      if (typeof image !== 'string') throw new Error(`${exercise.id} is missing image`)
+      const file = resolve('public', image)
+      expect(existsSync(file), file).toBe(true)
+      expect(statSync(file).size, file).toBeGreaterThan(1000)
+      const { width, height } = jpegSize(file)
+      expect(Math.max(width, height), file).toBeLessThanOrEqual(480)
+    }
   })
 
   it('keeps library values inside the fixed set', () => {
