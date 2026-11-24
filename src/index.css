@@ -78,6 +78,13 @@ fieldset {
   min-width: 0;
 }
 
+.logo {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  display: block;
+}
+
 .wordmark {
   margin: 0;
   font-size: 1.35rem;

@@ -1,5 +1,7 @@
 # Apex
 
+<img src="public/logo.png" width="32" height="32" alt="Apex" />
+
 Apex 是一个混合健身小站。第一次打开先问身高、体重、训练基础和目标，之后每次打开直接给出今天的训练：热身、力量、徒手、拉伸。
 
 Apex is a small hybrid-training page. The first visit asks for height, weight, training base, and goal. Later visits open straight onto today's plan: warm-up, strength, bodyweight, and stretching.
@@ -57,10 +59,11 @@ src/types/exercise.ts      schema 和运行时校验
 src/lib/profile.ts         资料、BMI、localStorage
 src/lib/plan.ts            今日训练
 src/App.tsx                问卷和今日训练
+public/logo.png            标志，页头和 favicon 共用这张图
 public/exercises/          力量和拉伸的图片
 ```
 
-页头 `.lockup` 是一行横排，目前只放文字「Apex」。之后可以把标志图片放在文字前面。现有的 favicon 没有改。
+页头 `.lockup` 在「Apex」左边放 `public/logo.png`，大约 32px。同一张图也是 favicon 和 apple-touch-icon，链接使用 Vite 的 `base`，在 `/apex/` 下同样有效。
 
 ## 数据来源
 
