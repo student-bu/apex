@@ -42,6 +42,13 @@ function Brand({ aside }: { aside?: ReactNode }) {
   return (
     <header className="top">
       <div className="lockup">
+        <img
+          className="logo"
+          src={`${import.meta.env.BASE_URL}logo.png`}
+          alt="Apex"
+          width={32}
+          height={32}
+        />
         <p className="wordmark">Apex</p>
       </div>
       {aside}
