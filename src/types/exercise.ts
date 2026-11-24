@@ -27,6 +27,8 @@ type ExerciseBase = {
   muscleGroup: MuscleGroup
   intensity: Intensity
   equipment: string
+  /** Photo under `public/`, relative to the Vite base. Example: `exercises/strength-bench-press.jpg`. */
+  image?: string
 }
 
 export type RepsExercise = ExerciseBase & {
@@ -43,6 +45,7 @@ export type Exercise = RepsExercise | TimeExercise
 
 const SHARED_KEYS = ['id', 'name', 'library', 'muscleGroup', 'type', 'intensity', 'equipment'] as const
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
+const IMAGE_PATTERN = /^exercises\/[a-z0-9]+(?:-[a-z0-9]+)*\.jpg$/
 const HAN_PATTERN = /\p{Script=Han}/u
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -57,10 +60,14 @@ function includes<T extends string>(values: readonly T[], value: unknown): value
   return typeof value === 'string' && (values as readonly string[]).includes(value)
 }
 
-function allowedKeys(type: unknown): readonly string[] {
+function requiredKeys(type: unknown): readonly string[] {
   if (type === 'reps') return [...SHARED_KEYS, 'defaultReps']
   if (type === 'time') return [...SHARED_KEYS, 'defaultSeconds']
-  return SHARED_KEYS
+  return [...SHARED_KEYS]
+}
+
+function allowedKeys(type: unknown): readonly string[] {
+  return [...requiredKeys(type), 'image']
 }
 
 export function validateCatalog(value: unknown): string[] {
@@ -77,12 +84,17 @@ export function validateCatalog(value: unknown): string[] {
     }
 
     const keys = Object.keys(entry)
-    const expected = allowedKeys(entry.type)
+    const required = requiredKeys(entry.type)
+    const allowed = allowedKeys(entry.type)
     for (const key of keys) {
-      if (!expected.includes(key)) errors.push(`${prefix} has unexpected key "${key}"`)
+      if (!allowed.includes(key)) errors.push(`${prefix} has unexpected key "${key}"`)
     }
-    for (const key of expected) {
+    for (const key of required) {
       if (!(key in entry)) errors.push(`${prefix} is missing "${key}"`)
+    }
+
+    if ('image' in entry && (typeof entry.image !== 'string' || !IMAGE_PATTERN.test(entry.image))) {
+      errors.push(`${prefix}.image must be a path like exercises/strength-bench-press.jpg`)
     }
 
     if (typeof entry.id !== 'string' || !ID_PATTERN.test(entry.id)) {

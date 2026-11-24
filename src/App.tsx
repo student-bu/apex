@@ -122,8 +122,15 @@ export default function App() {
           </p>
           <ol className="workout">
             {workout.blocks.map((block, index) => (
-              <li key={block.exercise.id}>
+              <li key={block.exercise.id} className={block.exercise.image ? 'has-image' : undefined}>
                 <span className="index">{index + 1}</span>
+                {block.exercise.image ? (
+                  <img
+                    className="thumb"
+                    src={`${import.meta.env.BASE_URL}${block.exercise.image}`}
+                    alt=""
+                  />
+                ) : null}
                 <div>
                   <p className="name">{block.exercise.name}</p>
                   <p className="meta">

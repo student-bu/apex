@@ -60,7 +60,16 @@ src/data/exercises.json    seeded libraries
 src/types/exercise.ts      schema, type, and runtime checks
 src/lib/workout.ts         pure generator
 src/App.tsx                today's workout page
+public/exercises/          strength photos used by the workout cards
 ```
+
+## 数据来源
+
+力量库的动作和图片选自 [free-exercise-db](https://github.com/yuhonas/free-exercise-db)（yuhonas）。该项目以 [Unlicense](https://unlicense.org/) 发布，属于公有领域，数据和图片都可以直接使用。谢谢作者把这套动作和示范图放进公有领域。
+
+Apex 只取每个力量动作的第一张图，压缩后放在 `public/exercises/`，并改写成现有 schema：中文名、肌群枚举、器械，以及默认次数或时长。`image` 是可选字段，训练卡片会按 Vite 的 `base`（页面在 `/apex/`）去拼这张缩略图。HYROX 和 HIIT 两个库没有使用这份数据。
+
+Strength movements and photos come from [free-exercise-db](https://github.com/yuhonas/free-exercise-db) by yuhonas, dedicated to the public domain under the [Unlicense](https://unlicense.org/). Each strength card uses that exercise's first image. HYROX and HIIT are unchanged.
 
 ## License
 
