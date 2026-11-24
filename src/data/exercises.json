@@ -7,7 +7,30 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 2,
-    "equipment": "杠铃"
+    "equipment": "杠铃",
+    "image": "exercises/strength-bench-press.jpg"
+  },
+  {
+    "id": "strength-incline-bench-press",
+    "name": "上斜杠铃卧推",
+    "library": "strength",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃",
+    "image": "exercises/strength-incline-bench-press.jpg"
+  },
+  {
+    "id": "strength-dumbbell-bench-press",
+    "name": "哑铃卧推",
+    "library": "strength",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "哑铃",
+    "image": "exercises/strength-dumbbell-bench-press.jpg"
   },
   {
     "id": "strength-dumbbell-fly",
@@ -17,7 +40,19 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 1,
-    "equipment": "哑铃"
+    "equipment": "哑铃",
+    "image": "exercises/strength-dumbbell-fly.jpg"
+  },
+  {
+    "id": "strength-push-up",
+    "name": "俯卧撑",
+    "library": "strength",
+    "muscleGroup": "chest",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 2,
+    "equipment": "自重",
+    "image": "exercises/strength-push-up.jpg"
   },
   {
     "id": "strength-pull-up",
@@ -27,7 +62,8 @@
     "type": "reps",
     "defaultReps": 6,
     "intensity": 3,
-    "equipment": "单杠"
+    "equipment": "单杠",
+    "image": "exercises/strength-pull-up.jpg"
   },
   {
     "id": "strength-barbell-row",
@@ -37,7 +73,52 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 2,
-    "equipment": "杠铃"
+    "equipment": "杠铃",
+    "image": "exercises/strength-barbell-row.jpg"
+  },
+  {
+    "id": "strength-dumbbell-row",
+    "name": "单臂哑铃划船",
+    "library": "strength",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "哑铃",
+    "image": "exercises/strength-dumbbell-row.jpg"
+  },
+  {
+    "id": "strength-lat-pulldown",
+    "name": "高位下拉",
+    "library": "strength",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "绳索",
+    "image": "exercises/strength-lat-pulldown.jpg"
+  },
+  {
+    "id": "strength-seated-row",
+    "name": "坐姿划船",
+    "library": "strength",
+    "muscleGroup": "back",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "绳索",
+    "image": "exercises/strength-seated-row.jpg"
+  },
+  {
+    "id": "strength-barbell-press",
+    "name": "杠铃推举",
+    "library": "strength",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃",
+    "image": "exercises/strength-barbell-press.jpg"
   },
   {
     "id": "strength-shoulder-press",
@@ -47,47 +128,52 @@
     "type": "reps",
     "defaultReps": 8,
     "intensity": 2,
-    "equipment": "哑铃"
+    "equipment": "哑铃",
+    "image": "exercises/strength-shoulder-press.jpg"
   },
   {
-    "id": "strength-back-squat",
-    "name": "杠铃深蹲",
+    "id": "strength-kettlebell-press",
+    "name": "壶铃推举",
     "library": "strength",
-    "muscleGroup": "quads",
-    "type": "reps",
-    "defaultReps": 5,
-    "intensity": 3,
-    "equipment": "杠铃"
-  },
-  {
-    "id": "strength-romanian-deadlift",
-    "name": "罗马尼亚硬拉",
-    "library": "strength",
-    "muscleGroup": "hamstrings",
+    "muscleGroup": "shoulders",
     "type": "reps",
     "defaultReps": 8,
     "intensity": 2,
-    "equipment": "杠铃"
+    "equipment": "壶铃",
+    "image": "exercises/strength-kettlebell-press.jpg"
   },
   {
-    "id": "strength-hip-thrust",
-    "name": "臀推",
+    "id": "strength-lateral-raise",
+    "name": "哑铃侧平举",
     "library": "strength",
-    "muscleGroup": "glutes",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "哑铃",
+    "image": "exercises/strength-lateral-raise.jpg"
+  },
+  {
+    "id": "strength-face-pull",
+    "name": "面拉",
+    "library": "strength",
+    "muscleGroup": "shoulders",
+    "type": "reps",
+    "defaultReps": 15,
+    "intensity": 1,
+    "equipment": "绳索",
+    "image": "exercises/strength-face-pull.jpg"
+  },
+  {
+    "id": "strength-barbell-curl",
+    "name": "杠铃弯举",
+    "library": "strength",
+    "muscleGroup": "arms",
     "type": "reps",
     "defaultReps": 10,
-    "intensity": 2,
-    "equipment": "杠铃"
-  },
-  {
-    "id": "strength-plank",
-    "name": "平板支撑",
-    "library": "strength",
-    "muscleGroup": "core",
-    "type": "time",
-    "defaultSeconds": 40,
     "intensity": 1,
-    "equipment": "瑜伽垫"
+    "equipment": "杠铃",
+    "image": "exercises/strength-barbell-curl.jpg"
   },
   {
     "id": "strength-dumbbell-curl",
@@ -97,7 +183,283 @@
     "type": "reps",
     "defaultReps": 12,
     "intensity": 1,
-    "equipment": "哑铃"
+    "equipment": "哑铃",
+    "image": "exercises/strength-dumbbell-curl.jpg"
+  },
+  {
+    "id": "strength-hammer-curl",
+    "name": "锤式弯举",
+    "library": "strength",
+    "muscleGroup": "arms",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "哑铃",
+    "image": "exercises/strength-hammer-curl.jpg"
+  },
+  {
+    "id": "strength-triceps-pushdown",
+    "name": "绳索下压",
+    "library": "strength",
+    "muscleGroup": "arms",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "绳索",
+    "image": "exercises/strength-triceps-pushdown.jpg"
+  },
+  {
+    "id": "strength-dip",
+    "name": "双杠臂屈伸",
+    "library": "strength",
+    "muscleGroup": "arms",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "双杠",
+    "image": "exercises/strength-dip.jpg"
+  },
+  {
+    "id": "strength-plank",
+    "name": "平板支撑",
+    "library": "strength",
+    "muscleGroup": "core",
+    "type": "time",
+    "defaultSeconds": 40,
+    "intensity": 1,
+    "equipment": "自重",
+    "image": "exercises/strength-plank.jpg"
+  },
+  {
+    "id": "strength-dead-bug",
+    "name": "死虫式",
+    "library": "strength",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 1,
+    "equipment": "自重",
+    "image": "exercises/strength-dead-bug.jpg"
+  },
+  {
+    "id": "strength-hanging-leg-raise",
+    "name": "悬垂举腿",
+    "library": "strength",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "单杠",
+    "image": "exercises/strength-hanging-leg-raise.jpg"
+  },
+  {
+    "id": "strength-crunch",
+    "name": "卷腹",
+    "library": "strength",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 15,
+    "intensity": 1,
+    "equipment": "自重",
+    "image": "exercises/strength-crunch.jpg"
+  },
+  {
+    "id": "strength-russian-twist",
+    "name": "俄罗斯转体",
+    "library": "strength",
+    "muscleGroup": "core",
+    "type": "reps",
+    "defaultReps": 16,
+    "intensity": 1,
+    "equipment": "自重",
+    "image": "exercises/strength-russian-twist.jpg"
+  },
+  {
+    "id": "strength-back-squat",
+    "name": "杠铃深蹲",
+    "library": "strength",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 5,
+    "intensity": 3,
+    "equipment": "杠铃",
+    "image": "exercises/strength-back-squat.jpg"
+  },
+  {
+    "id": "strength-front-squat",
+    "name": "前蹲",
+    "library": "strength",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 5,
+    "intensity": 3,
+    "equipment": "杠铃",
+    "image": "exercises/strength-front-squat.jpg"
+  },
+  {
+    "id": "strength-goblet-squat",
+    "name": "高脚杯深蹲",
+    "library": "strength",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "壶铃",
+    "image": "exercises/strength-goblet-squat.jpg"
+  },
+  {
+    "id": "strength-dumbbell-lunge",
+    "name": "哑铃弓步",
+    "library": "strength",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "哑铃",
+    "image": "exercises/strength-dumbbell-lunge.jpg"
+  },
+  {
+    "id": "strength-leg-press",
+    "name": "腿举",
+    "library": "strength",
+    "muscleGroup": "quads",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "器械",
+    "image": "exercises/strength-leg-press.jpg"
+  },
+  {
+    "id": "strength-romanian-deadlift",
+    "name": "罗马尼亚硬拉",
+    "library": "strength",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "杠铃",
+    "image": "exercises/strength-romanian-deadlift.jpg"
+  },
+  {
+    "id": "strength-dumbbell-rdl",
+    "name": "哑铃直腿硬拉",
+    "library": "strength",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "哑铃",
+    "image": "exercises/strength-dumbbell-rdl.jpg"
+  },
+  {
+    "id": "strength-leg-curl",
+    "name": "俯卧腿弯举",
+    "library": "strength",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "器械",
+    "image": "exercises/strength-leg-curl.jpg"
+  },
+  {
+    "id": "strength-kettlebell-single-leg-deadlift",
+    "name": "壶铃单腿硬拉",
+    "library": "strength",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "壶铃",
+    "image": "exercises/strength-kettlebell-single-leg-deadlift.jpg"
+  },
+  {
+    "id": "strength-hip-thrust",
+    "name": "臀推",
+    "library": "strength",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 10,
+    "intensity": 2,
+    "equipment": "杠铃",
+    "image": "exercises/strength-hip-thrust.jpg"
+  },
+  {
+    "id": "strength-glute-bridge",
+    "name": "臀桥",
+    "library": "strength",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "自重",
+    "image": "exercises/strength-glute-bridge.jpg"
+  },
+  {
+    "id": "strength-glute-kickback",
+    "name": "跪姿后踢",
+    "library": "strength",
+    "muscleGroup": "glutes",
+    "type": "reps",
+    "defaultReps": 12,
+    "intensity": 1,
+    "equipment": "自重",
+    "image": "exercises/strength-glute-kickback.jpg"
+  },
+  {
+    "id": "strength-sumo-deadlift",
+    "name": "相扑硬拉",
+    "library": "strength",
+    "muscleGroup": "hamstrings",
+    "type": "reps",
+    "defaultReps": 6,
+    "intensity": 2,
+    "equipment": "杠铃",
+    "image": "exercises/strength-sumo-deadlift.jpg"
+  },
+  {
+    "id": "strength-deadlift",
+    "name": "硬拉",
+    "library": "strength",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 5,
+    "intensity": 3,
+    "equipment": "杠铃",
+    "image": "exercises/strength-deadlift.jpg"
+  },
+  {
+    "id": "strength-power-clean",
+    "name": "高翻",
+    "library": "strength",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 3,
+    "intensity": 3,
+    "equipment": "杠铃",
+    "image": "exercises/strength-power-clean.jpg"
+  },
+  {
+    "id": "strength-turkish-get-up",
+    "name": "土耳其起立",
+    "library": "strength",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 5,
+    "intensity": 2,
+    "equipment": "壶铃",
+    "image": "exercises/strength-turkish-get-up.jpg"
+  },
+  {
+    "id": "strength-kettlebell-snatch",
+    "name": "壶铃抓举",
+    "library": "strength",
+    "muscleGroup": "fullBody",
+    "type": "reps",
+    "defaultReps": 8,
+    "intensity": 2,
+    "equipment": "壶铃",
+    "image": "exercises/strength-kettlebell-snatch.jpg"
   },
   {
     "id": "hyrox-ski-erg",
