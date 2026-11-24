@@ -55,6 +55,12 @@ If a library cannot fill the target without breaking a rule, the result is a sho
 
 ## 数据来源
 
+力量库的动作和图片选自 [free-exercise-db](https://github.com/yuhonas/free-exercise-db)（yuhonas）。该项目以 [Unlicense](https://unlicense.org/) 发布，属于公有领域，数据和图片都可以直接使用。谢谢作者把这套动作和示范图放进公有领域。
+
+Apex 只取每个力量动作的第一张图，压缩后放在 `public/exercises/`，并改写成现有 schema：中文名、肌群枚举、器械，以及默认次数或时长。`image` 是可选字段，训练卡片会按 Vite 的 `base`（页面在 `/apex/`）去拼这张缩略图。HYROX 和 HIIT 两个库没有使用这份数据，也没有配图。
+
+Strength movements and photos come from [free-exercise-db](https://github.com/yuhonas/free-exercise-db) by yuhonas, dedicated to the public domain under the [Unlicense](https://unlicense.org/). Each strength card uses that exercise's first image. HYROX and HIIT do not use these photos.
+
 HIIT 库在原有间歇动作上，并入了从 Open WOD Database 选出的常见间歇动作。波比跳、俯卧撑、登山跑这三条本来就在库里，合并时没有再加一遍。新增动作的中文名是翻译，次数和秒数按上面的训练剂量改写，不是数据库里的原始课表。
 
 Open WOD Database (https://github.com/WodWiz/open-wod-db, https://www.wodwiz.com/benchmarks), CC BY 4.0。动作经过改编和翻译。CrossFit 是商标。这些条目只是常见体能动作的结构化整理，不表示 CrossFit 官方授权或关联。
@@ -70,6 +76,7 @@ src/data/exercises.json    seeded libraries
 src/types/exercise.ts      schema, type, and runtime checks
 src/lib/workout.ts         pure generator
 src/App.tsx                today's workout page
+public/exercises/          strength photos used by the workout cards
 ```
 
 ## License

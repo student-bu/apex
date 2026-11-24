@@ -61,6 +61,22 @@ function timed(partial: {
   }
 }
 
+function expectRulesForSeeds(seeds: readonly string[]) {
+  const selections: Library[][] = [['strength'], ['hyrox'], ['hiit'], ['strength', 'hyrox', 'hiit']]
+  for (const libraries of selections) {
+    for (const durationMinutes of DURATION_OPTIONS) {
+      for (const seed of seeds) {
+        const workout = generateWorkout(exercises, { libraries, durationMinutes, seed })
+        expect(workout.blocks, `${libraries.join('+')} ${durationMinutes} ${seed}`).toHaveLength(
+          targetExerciseCount(durationMinutes),
+        )
+        expect(workout.warnings, `${libraries.join('+')} ${durationMinutes} ${seed}`).toEqual([])
+        expectInvariants(workout, libraries, durationMinutes)
+      }
+    }
+  }
+}
+
 function expectInvariants(workout: Workout, libraries: readonly Library[], duration: DurationMinutes) {
   const ids = workout.blocks.map((block) => block.exercise.id)
   expect(new Set(ids).size).toBe(ids.length)
@@ -155,19 +171,23 @@ describe('workout generator', () => {
       'interval',
       'station',
     ]
-    const selections: Library[][] = [['strength'], ['hyrox'], ['hiit'], ['strength', 'hyrox', 'hiit']]
-    for (const libraries of selections) {
-      for (const durationMinutes of DURATION_OPTIONS) {
-        for (const seed of seeds) {
-          const workout = generateWorkout(exercises, { libraries, durationMinutes, seed })
-          expect(workout.blocks, `${libraries.join('+')} ${durationMinutes} ${seed}`).toHaveLength(
-            targetExerciseCount(durationMinutes),
-          )
-          expect(workout.warnings, `${libraries.join('+')} ${durationMinutes} ${seed}`).toEqual([])
-          expectInvariants(workout, libraries, durationMinutes)
-        }
-      }
-    }
+    expectRulesForSeeds(seeds)
+  })
+
+  it('builds a full workout for many seeds without breaking the rules', () => {
+    const seeds = [
+      '2026-11-13',
+      '2026-11-24',
+      '2026-01-01',
+      '2026-07-04',
+      '2025-12-31',
+      'portfolio',
+      'shuffle-9',
+      'apex',
+      'strength-42',
+      'seed-3',
+    ]
+    expectRulesForSeeds(seeds)
   })
 
   it('does not repeat an exercise or a neighboring muscle group', () => {

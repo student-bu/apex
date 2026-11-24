@@ -1,22 +1,11 @@
+import { existsSync, statSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import data from './exercises.json'
 import { EXERCISE_TYPES, LIBRARIES, MUSCLE_GROUPS, validateCatalog } from '../types/exercise.ts'
 
 const HAN_PATTERN = /\p{Script=Han}/u
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
-
-const STRENGTH_IDS = [
-  'strength-bench-press',
-  'strength-dumbbell-fly',
-  'strength-pull-up',
-  'strength-barbell-row',
-  'strength-shoulder-press',
-  'strength-back-squat',
-  'strength-romanian-deadlift',
-  'strength-hip-thrust',
-  'strength-plank',
-  'strength-dumbbell-curl',
-]
 
 /** Stations in race order, plus the 1 km run that separates them. */
 const HYROX_STATION_IDS = [
@@ -83,15 +72,63 @@ describe('exercise catalog', () => {
     }
   })
 
-  it('keeps the strength library and sizes HIIT and HYROX for interval and race-station training', () => {
+  it('gives every exercise a Chinese name, a legal enum, and an in-range default', () => {
+    for (const exercise of data) {
+      expect(exercise.name, exercise.id).toMatch(/\p{Script=Han}/u)
+      expect(MUSCLE_GROUPS, exercise.id).toContain(exercise.muscleGroup)
+      expect(LIBRARIES, exercise.id).toContain(exercise.library)
+      expect([1, 2, 3], exercise.id).toContain(exercise.intensity)
+      if (exercise.type === 'reps') {
+        expect(exercise.defaultReps, exercise.id).toBeGreaterThanOrEqual(1)
+        expect(exercise.defaultReps, exercise.id).toBeLessThanOrEqual(50)
+      } else {
+        expect(exercise.defaultSeconds, exercise.id).toBeGreaterThanOrEqual(1)
+        expect(exercise.defaultSeconds, exercise.id).toBeLessThanOrEqual(180)
+      }
+    }
+  })
+
+  it('stores a real photo for every strength exercise', () => {
+    const strength = data.filter((exercise) => exercise.library === 'strength')
+    expect(strength).toHaveLength(42)
+    expect(new Set(strength.map((exercise) => exercise.muscleGroup))).toEqual(new Set(MUSCLE_GROUPS))
+    for (const equipment of ['自重', '哑铃', '杠铃', '壶铃']) {
+      expect(strength.some((exercise) => exercise.equipment === equipment), equipment).toBe(true)
+    }
+    expect(new Set(strength.map((exercise) => exercise.type))).toEqual(new Set(['reps', 'time']))
+
+    const images = new Set<string>()
+    for (const exercise of strength) {
+      const image = 'image' in exercise ? exercise.image : undefined
+      if (typeof image !== 'string') throw new Error(`${exercise.id} is missing image`)
+      expect(image, exercise.id).toMatch(/^exercises\/[a-z0-9]+(?:-[a-z0-9]+)*\.jpg$/)
+      expect(images.has(image), image).toBe(false)
+      images.add(image)
+      const file = resolve('public', image)
+      expect(existsSync(file), file).toBe(true)
+      expect(statSync(file).size, file).toBeGreaterThan(1000)
+    }
+  })
+
+  it('leaves hyrox and hiit without photos', () => {
+    const expected = { hyrox: 17, hiit: 27 } as const
+    for (const library of ['hyrox', 'hiit'] as const) {
+      const entries = data.filter((exercise) => exercise.library === library)
+      expect(entries, library).toHaveLength(expected[library])
+      expect(new Set(entries.map((exercise) => exercise.type))).toEqual(new Set(['reps', 'time']))
+      for (const exercise of entries) {
+        expect(exercise, exercise.id).not.toHaveProperty('image')
+      }
+    }
+  })
+
+  it('keeps library sizes at 42 strength, 17 HYROX, and 27 HIIT exercises', () => {
     const byLibrary = Object.fromEntries(
       LIBRARIES.map((library) => [library, data.filter((exercise) => exercise.library === library)]),
     )
-    expect(byLibrary.strength?.map((exercise) => exercise.id)).toEqual(STRENGTH_IDS)
-    expect(byLibrary.hyrox?.length).toBeGreaterThanOrEqual(15)
-    expect(byLibrary.hyrox?.length).toBeLessThanOrEqual(20)
-    expect(byLibrary.hiit?.length).toBeGreaterThanOrEqual(25)
-    expect(byLibrary.hiit?.length).toBeLessThanOrEqual(30)
+    expect(byLibrary.strength).toHaveLength(42)
+    expect(byLibrary.hyrox).toHaveLength(17)
+    expect(byLibrary.hiit).toHaveLength(27)
     for (const library of LIBRARIES) {
       expect(new Set(byLibrary[library]?.map((exercise) => exercise.type)), library).toEqual(
         new Set(['reps', 'time']),
@@ -141,6 +178,18 @@ describe('exercise catalog', () => {
     expect(errors.some((error) => error.includes('name'))).toBe(true)
     expect(errors.some((error) => error.includes('intensity'))).toBe(true)
     expect(errors.some((error) => error.includes('extra'))).toBe(true)
+  })
+
+  it('allows a missing image and rejects a bad image path', () => {
+    const [first] = data
+    if (!first || !('image' in first) || typeof first.image !== 'string') {
+      throw new Error('expected the first exercise to carry an image')
+    }
+    const { image, ...withoutImage } = first
+    expect(image).toMatch(/^exercises\//)
+    expect(validateCatalog([withoutImage])).toEqual([])
+    const errors = validateCatalog([{ ...first, image: '../secret.jpg' }])
+    expect(errors.some((error) => error.includes('image'))).toBe(true)
   })
 
   it('keeps library values inside the fixed set', () => {
